@@ -1,0 +1,300 @@
+{% assign default = '1400x' %}
+{% assign size1 = '480x' %}
+{% assign size2 = '765x' %}
+{% assign size3 = '900x' %}
+{% assign size4 = '1000x' %}
+{% assign size5 = '1100x' %}
+{% assign size6 = '1300x' %}
+{% assign size7 = '1500x' %}
+{% assign size8 = '1700x' %}
+{% assign size9 = '1900x' %}
+{% assign size10 = '2000x' %}
+
+<div class="logo-bar-section container" {{ block.shopify_attributes }}>
+  <div class="sixteen columns">
+    <div class="section clearfix">
+    {% if block.settings.title != blank %}
+        <h2 class="title center">{{ block.settings.title | escape }}</h2>
+      	{% comment %}
+        <div class="feature_divider no-margin"></div>
+      	{% endcomment %}
+    {% endif %}
+
+      <div class="logo-bar">
+        {% if block.settings.logo1image != blank %}
+          <div class="logo-bar__item">
+            {% if block.settings.logo1link != blank %}
+              <a href="{{ block.settings.logo1link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.logo1image != blank %}
+              <img  src="{{ block.settings.logo1image | img_url: '100x' }}"
+                alt="{{ block.settings.logo1image.alt | escape }}"
+                class="lazyload {{ settings.logo1image_loading_style }}"
+                style="max-width: {{- block.settings.logo1image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.logo1image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.logo1image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.logo1image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.logo1link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if block.settings.logo2image != blank %}
+          <div class="logo-bar__item">
+            {% if block.settings.logo2link != blank %}
+              <a href="{{ block.settings.logo2link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.logo2image != blank %}
+              <img  src="{{ block.settings.logo2image | img_url: '100x' }}"
+                alt="{{ block.settings.logo2image.alt | escape }}"
+                class="lazyload {{ settings.logo2image_loading_style }}"
+                style="max-width: {{- block.settings.logo2image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.logo2image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.logo2image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.logo2image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.logo2link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if block.settings.logo3image != blank %}
+          <div class="logo-bar__item">
+            {% if block.settings.logo3link != blank %}
+              <a href="{{ block.settings.logo3link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.logo3image != blank %}
+              <img  src="{{ block.settings.logo3image | img_url: '100x' }}"
+                alt="{{ block.settings.logo3image.alt | escape }}"
+                class="lazyload {{ settings.logo3image }}"
+                style="max-width: {{- block.settings.logo3image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.logo2image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.logo3image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.logo3image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.logo3link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if block.settings.logo4image != blank %}
+          <div class="logo-bar__item">
+            {% if block.settings.logo4link != blank %}
+              <a href="{{ block.settings.logo4link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.logo4image != blank %}
+              <img  src="{{ block.settings.logo4image | img_url: '100x' }}"
+                alt="{{ block.settings.logo4image.alt | escape }}"
+                class="lazyload {{ settings.logo4image }}"
+                style="max-width: {{- block.settings.logo4image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.logo4image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.logo4image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.logo4image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.logo4link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if block.settings.logo5image != blank %}
+          <div class="logo-bar__item">
+            {% if block.settings.logo5link != blank %}
+              <a href="{{ block.settings.logo5link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.logo5image != blank %}
+              <img  src="{{ block.settings.logo5image | img_url: '100x' }}"
+                alt="{{ block.settings.logo5image.alt | escape }}"
+                class="lazyload {{ settings.logo5image }}"
+                style="max-width: {{- block.settings.logo5image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.logo5image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.logo5image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.logo5image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.logo5link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if block.settings.logo6image != blank %}
+          <div class="logo-bar__item">
+            {% if block.settings.logo6link != blank %}
+              <a href="{{ block.settings.logo6link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.logo6image != blank %}
+              <img  src="{{ block.settings.logo6image | img_url: '100x' }}"
+                alt="{{ block.settings.logo6image.alt | escape }}"
+                class="lazyload {{ settings.logo6image }}"
+                style="max-width: {{- block.settings.logo6image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.logo6image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.logo6image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.logo6image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.logo6link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if block.settings.logo7image != blank %}
+          <div class="logo-bar__item">
+            {% if block.settings.logo7link != blank %}
+              <a href="{{ block.settings.logo7link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.logo7image != blank %}
+              <img  src="{{ block.settings.logo7image | img_url: '100x' }}"
+                alt="{{ block.settings.logo7image.alt | escape }}"
+                class="lazyload {{ settings.logo7image }}"
+                style="max-width: {{- block.settings.logo7image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.logo7image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.logo7image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.logo7image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.logo7link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if block.settings.logo8image != blank %}
+          <div class="logo-bar__item">
+            {% if block.settings.logo8link != blank %}
+              <a href="{{ block.settings.logo8link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.logo8image != blank %}
+              <img  src="{{ block.settings.logo8image | img_url: '100x' }}"
+                alt="{{ block.settings.logo8image.alt | escape }}"
+                class="lazyload {{ settings.logo8image }}"
+                style="max-width: {{- block.settings.logo8image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.logo8image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.logo8image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.logo8image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.logo8link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+</div>
